@@ -1,11 +1,11 @@
-const HomePosts = () => {
+const ProfilePosts = () => {
   return (
     <div className="w-full flex mt-8 md:space-x-6 space-x-2">
       <div className="w-[35%] h-[200px] flex justify-center items-center">
         <img
           src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           alt=""
-          className="h-[80%] w-full object-cover"
+          className="h-full w-full object-cover"
         />
       </div>
       <div className="flex flex-col w-[65%]">
@@ -29,4 +29,4 @@ const HomePosts = () => {
   );
 };
 
-export default HomePosts;
+export default ProfilePosts;
