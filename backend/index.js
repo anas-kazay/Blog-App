@@ -6,6 +6,7 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const postsRoute = require("./routes/posts");
 const commentsRoute = require("./routes/comments");
+const cors = require("cors");
 require("dotenv").config();
 
 //database
@@ -20,6 +21,7 @@ const connectDB = async () => {
 
 //middlewares
 app.use(express.json());
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(cookieParser());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
