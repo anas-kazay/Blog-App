@@ -9,12 +9,13 @@ const CommentSchema = new mongoose.Schema(
     author: {
       type: String,
       required: true,
+      unique: false,
     },
     postId: {
       type: String,
       required: true,
     },
-    usertId: {
+    userId: {
       type: String,
       required: true,
     },

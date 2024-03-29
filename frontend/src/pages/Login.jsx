@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import { useContext, useState } from "react";
-import URL from "../url";
+import { URL } from "../url";
 import axios from "axios";
 import { UserContext } from "./../context/UserContext";
 

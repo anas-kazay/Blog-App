@@ -1,6 +1,6 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
-import URL from "../url";
+import { URL } from "../url";
 
 export const UserContext = createContext({});
 
@@ -17,6 +17,7 @@ export function UserContextProvider({ children }) {
         withCredentials: true,
       });
       setUser(res.data);
+      localStorage.setItem("user", JSON.stringify(res.data));
     } catch (err) {
       console.log(err);
     }
