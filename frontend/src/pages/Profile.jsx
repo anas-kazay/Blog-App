@@ -30,6 +30,7 @@ const Profile = () => {
         { withCredentials: true }
       );
       localStorage.setItem("user", JSON.stringify(res.data));
+      setUser(res.data);
       setUpdated(true);
     } catch (err) {
       console.log(err);
@@ -70,15 +71,6 @@ const Profile = () => {
   }, []);
 
   useEffect(() => {
-    if (user) {
-      setUsername(user.username);
-      setEmail(user.email);
-      setPassword(user.password);
-      localStorage.setItem("user", JSON.stringify(user));
-    }
-  }, [user]);
-
-  useEffect(() => {
     fetchUserPosts();
   }, []);
 
@@ -109,13 +101,7 @@ const Profile = () => {
               onChange={(e) => setEmail(e.target.value)}
               value={email || ""}
             />
-            <input
-              type="password"
-              placeholder="Your password"
-              className="outline-non px-4 py-2 text-gray-500"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password || ""}
-            />
+
             <div className="flex items-center space-x-4 mt-8">
               <button
                 className="text-white font-semibold bg-black hover:text-black hover:bg-gray-400 py-2 px-4"

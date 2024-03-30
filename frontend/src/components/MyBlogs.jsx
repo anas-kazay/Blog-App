@@ -40,7 +40,7 @@ const MyBlogs = () => {
       <Navbar />
       <div className="px-8 md:px-[150px] min-h-[80vh]">
         {posts.map((post) => (
-          <Link to={user ? `posts/post/${post._id}` : "/login"} key={post._id}>
+          <Link to={user ? `/posts/post/${post._id}` : "/login"} key={post._id}>
             <HomePosts post={post} />
           </Link>
         ))}
