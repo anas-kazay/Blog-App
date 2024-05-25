@@ -1,6 +1,6 @@
 # Blog-App
 
-<h3>Blog App using nodeJs for the backend, and React & talwind for the front end</h3>
+<h3>Blog App using nodeJs for the backend, and React & tailwind for the front end</h3>
 
 <h2>Some images of the website interfaces</h2>
 
